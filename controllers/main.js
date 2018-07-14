@@ -11,7 +11,7 @@ const Main = function (req, res) {
     validation.passes(function () {
         const model = tf.sequential();
         model.add(tf.layers.dense({ units: 1, inputShape: [1] }));
-        model.compile({ loss: 'meanSquaredError', optimizer: 'sgd' });
+        model.compile({ loss: 'categoricalCrossentropy', optimizer: 'sgd' });
 
         firestore.collection('tensorFlow').doc(req.body.index).get().then((data) => {
             const dataset = data.data()['0'].map((value) => Number(value))
