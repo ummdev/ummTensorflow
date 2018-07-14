@@ -3,6 +3,6 @@ const routesAPI = express.Router();
 
 const Main = require('./../controllers/main')
 
-routesAPI.get('/', Main);
+routesAPI.post('/tensorflow', Main);
 
 module.exports = routesAPI;
