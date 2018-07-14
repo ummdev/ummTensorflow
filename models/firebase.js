@@ -8,6 +8,7 @@ const config = {
     storageBucket: process.env.FIREBASE_Bucket,
     messagingSenderId: process.env.FIREBASE_MEG_ID
   };
-const app = firebase.initializeApp(config);
+firebase.initializeApp(config);
+const firestore = firebase.firestore();
 
-module.exports = app
+module.exports = firestore
