@@ -1,10 +1,10 @@
 const express = require('express')
-const routes = require('./route/api')
+const routesAPI = require('./route/api')
 const bodyParser = require('body-parser');
 
 let app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use('/', routes);
+app.use('/apis/', routesAPI);
 
 // using arrow syntax
 app.use((req, res, next) => {

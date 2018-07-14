@@ -1,8 +1,8 @@
 const express = require('express')
-const router = express.Router();
+const routesAPI = express.Router();
 
 const Main = require('./../controllers/main')
 
-router.get('/', Main);
+routesAPI.get('/', Main);
 
-module.exports = router;
+module.exports = routesAPI;
