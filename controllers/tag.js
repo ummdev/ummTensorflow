@@ -7,4 +7,5 @@ const Tag = function (req, res) {
         res.status(200).json({ success: true, massage: item })
     })
 }
+
 module.exports = Tag
